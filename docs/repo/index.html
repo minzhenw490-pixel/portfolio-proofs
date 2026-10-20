@@ -34,6 +34,8 @@ footer{margin-top:32px;color:#8a8a8a;font-size:12.5px;text-align:center}
 
 .cards{grid-template-columns:1fr 1fr}
 
+.cards{grid-template-columns:1fr 1fr}
+
 pre{background:#f7f7f9;padding:12px;border-radius:6px;overflow:auto;font-size:12.5px}
 </style></head><body><div class="wrap">
 <a class="back" href="../">← 返回</a>
@@ -57,13 +59,9 @@ pre{background:#f7f7f9;padding:12px;border-radius:6px;overflow:auto;font-size:12
         · POST /api/execute — 独立 Vault 闸门（EIP-712，不直接调 DEX）
     → Event 日志（JSONL 持久化 + 内存查询）
     → Analysis Pipeline（校验、去重、覆盖率、统计、Sentinel 安全洞察）
-
-**执行器选择（demo 模式）：**
-
-| 条件 | 执行方式 |
-|------|----------|
-| `SWAP_PRIVATE_KEY` + Router + Agent 已配置 | 后端 `POST /api/swap/safe` 或 `/force`（Router 一笔 tx 或 Direct 三笔 tx） |
-| 未配置 backend swap 密钥（典型：`monad-testnet`） | 前端 MetaMask：`POST /api/swap/wallet/plan` → 用户签名 permit / swap |</code></pre>
+</code></pre>
+<p><b>执行器选择（demo 模式）：</b></p>
+<table><thead><tr><th>条件</th><th>执行方式</th></tr></thead><tbody><tr><td><code>SWAP_PRIVATE_KEY</code> + Router + Agent 已配置</td><td>后端 <code>POST /api/swap/safe</code> 或 <code>/force</code>（Router 一笔 tx 或 Direct 三笔 tx）</td></tr><tr><td>未配置 backend swap 密钥（典型：<code>monad-testnet</code>）</td><td>前端 MetaMask：<code>POST /api/swap/wallet/plan</code> → 用户签名 permit / swap</td></tr></tbody></table>
 <hr>
 <h3>Demo 场景概览</h3>
 <table><thead><tr><th>项目</th><th>说明</th></tr></thead><tbody><tr><td>代币</td><td>USDC、GOOD、BAD、BAIT</td></tr><tr><td>价格比例</td><td>USDC : GOOD : BAD : BAIT = <b>1 : 20 : 100 : 1</b></td></tr><tr><td>池类型</td><td>SAFE / SHALLOW / TOXIC / <b>SDA</b>（各 4 档）</td></tr><tr><td>定向币对</td><td>4 代币两两可交易 → <b>12 币对 × 4 池 = 48 路由</b></td></tr><tr><td>路由命名</td><td><code>route-{tokenIn}-{tokenOut}-{pool}</code>，如 <code>route-usdc-good-sda</code></td></tr><tr><td>链上合约</td><td><code>DemoPair</code>、<code>DemoPoolRegistry</code>、<code>DemoScenarioDeployer</code>、<code>DemoSwapRouter</code></td></tr><tr><td>闸门合约</td><td><code>VaultExecution.sol</code>（EIP-712 permit）</td></tr></tbody></table>
