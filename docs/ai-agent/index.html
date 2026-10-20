@@ -30,6 +30,8 @@ footer{margin-top:32px;color:#8a8a8a;font-size:12.5px;text-align:center}
 
 .cards{grid-template-columns:1fr 1fr}
 
+.cards{grid-template-columns:1fr 1fr}
+
 details{background:#fff;border:1px solid #e6e6e8;border-radius:8px;margin:10px 0;padding:0}
 details summary{cursor:pointer;padding:12px 16px;font-size:14px;font-weight:600;list-style:none}
 details summary::-webkit-details-marker{display:none}
@@ -42,20 +44,54 @@ pre{background:#f7f7f9;padding:12px;border-radius:6px;overflow:auto;font-size:12
 </style></head><body><div class="wrap">
 <a class="back" href="../">← 返回</a>
 <header><h1>本地 AI Agent 工作流</h1>
-<div class="sub">基于 Hermes Agent + Codex 搭建 · 本地部署 ｜ 9 个角色分工 + 调度器 + 3 份 SOP ｜ 2026</div></header>
+<div class="sub">基于 Hermes Agent + Codex 搭建 · 本地部署 ｜ 9 个角色分工 + 调度器 + 3 份 SOP + 9 张角色卡 ｜ 2026</div></header>
 <article>
 <h2>它解决什么</h2>
 <p>把「找资料 → 核验来源 → 竞品分析 → 内容大纲 → 初稿 → 人工修改」这套重复动作固定成流程：<b>Chief Agent 先判断任务类型，分派给对应角色，最后汇总成一份方案交本人确认</b>。人只做四件事：判断做不做、选方案、和真人沟通、拍板。</p>
 
 <h2>9 个角色</h2>
-<table><thead><tr><th>Agent</th><th>角色</th><th>做什么</th><th>文件</th></tr></thead><tbody><tr><td><code>chief</code></td><td>总调度</td><td>判断任务类型 → 分派给对应 Agent → 汇总 → 交本人确认</td><td><a href="md/agents/chief.md" target="_blank">角色卡</a></td></tr><tr><td><code>pm</code></td><td>产品经理</td><td>发现问题 → 验证 → 方案 → PRD → 数据验证</td><td><a href="md/agents/pm.md" target="_blank">角色卡</a></td></tr><tr><td><code>content</code></td><td>内容运营</td><td>找问题 → 检查解释 → 做成可落地内容 → 回收反馈迭代</td><td><a href="md/agents/content.md" target="_blank">角色卡</a></td></tr><tr><td><code>ops</code></td><td>Web3 运营</td><td>活动 / 社群 / 内容 / 增长 / 复盘（按固定模板）</td><td><a href="md/agents/ops.md" target="_blank">角色卡</a></td></tr><tr><td><code>research</code></td><td>调研</td><td>用户 / 市场 / 竞品，结论可溯源</td><td><a href="md/agents/research.md" target="_blank">角色卡</a></td></tr><tr><td><code>design</code></td><td>设计</td><td>页面结构 + 黑白线框</td><td><a href="md/agents/design.md" target="_blank">角色卡</a></td></tr><tr><td><code>tech</code></td><td>技术可行性</td><td>能不能做、成本多少、有哪些坑</td><td><a href="md/agents/tech.md" target="_blank">角色卡</a></td></tr><tr><td><code>growth</code></td><td>增长运营</td><td>漏斗 / 转化 / 指标 / A-B</td><td><a href="md/agents/growth.md" target="_blank">角色卡</a></td></tr><tr><td><code>review</code></td><td>挑刺</td><td>对方案做对抗式评审</td><td><a href="md/agents/review.md" target="_blank">角色卡</a></td></tr></tbody></table>
+<table><thead><tr><th>Agent</th><th>角色</th><th>做什么</th><th>文件</th></tr></thead><tbody><tr><td><code>chief</code></td><td>总调度</td><td>判断任务类型 → 分派 → 汇总 → 交本人确认</td><td><a href="md/agents/chief.md" target="_blank">角色卡</a></td></tr><tr><td><code>pm</code></td><td>产品经理</td><td>发现问题 → 验证 → 方案 → PRD → 数据验证</td><td><a href="md/agents/pm.md" target="_blank">角色卡</a></td></tr><tr><td><code>content</code></td><td>内容运营</td><td>找问题 → 检查解释 → 做成可落地内容 → 回收反馈迭代</td><td><a href="md/agents/content.md" target="_blank">角色卡</a></td></tr><tr><td><code>ops</code></td><td>Web3 运营</td><td>活动 / 社群 / 内容 / 增长 / 复盘（按固定模板）</td><td><a href="md/agents/ops.md" target="_blank">角色卡</a></td></tr><tr><td><code>research</code></td><td>调研</td><td>用户 / 市场 / 竞品，结论可溯源</td><td><a href="md/agents/research.md" target="_blank">角色卡</a></td></tr><tr><td><code>design</code></td><td>设计</td><td>页面结构 + 黑白线框</td><td><a href="md/agents/design.md" target="_blank">角色卡</a></td></tr><tr><td><code>tech</code></td><td>技术可行性</td><td>能不能做、成本多少、有哪些坑</td><td><a href="md/agents/tech.md" target="_blank">角色卡</a></td></tr><tr><td><code>growth</code></td><td>增长运营</td><td>漏斗 / 转化 / 指标 / A-B + <b>SEO 巡检 × 技术协作</b>（发现问题 → 数据证明 → 提需求 → 验收 → 复盘）</td><td><a href="md/agents/growth.md" target="_blank">角色卡</a></td></tr><tr><td><code>review</code></td><td>挑刺</td><td>定稿前找漏洞和风险</td><td><a href="md/agents/review.md" target="_blank">角色卡</a></td></tr></tbody></table>
 
 <h2>统一底层原则</h2>
 <blockquote>发现问题 → 提出假设 → 验证 → 产出 → 获得反馈 → 迭代。<br>
-不编造反常识观点；不把第一次猜测当最终答案；回收反馈再进入下一轮。</blockquote>
+所有结论必须区分标注：已验证事实 · 数据事实 · 用户反馈 · 未验证假设 · 推测。</blockquote>
 
-<h2>文档全文（点开阅读）</h2>
-<details><summary>个人 AI OS · 结构说明　<span class="tag">5 KB</span></summary><div class="inner"><h2>个人 AI OS — 结构说明（77 专用）</h2>
+<h2>全部文档（点开阅读，原文件可下载）</h2>
+<details><summary>README（总入口 · 怎么改怎么用）　<span class="tag">3 KB</span></summary><div class="inner"><h2>AI-Agent（77 的个人 AI OS）</h2>
+<blockquote><b>以后要升级 Agent 或改 SOP</b>：把 AI 领到这个文件就够了 —— 它读完这里就能找到全部内容。</blockquote>
+<hr>
+<h3>一、这里有什么</h3>
+<table><thead><tr><th>路径</th><th>内容</th><th>谁能改</th></tr></thead><tbody><tr><td><code>README.md</code></td><td>本文件（总入口）</td><td>你 / AI</td></tr><tr><td><code>agents/</code></td><td><b>9 张角色卡（唯一真相源）</b></td><td>你 / AI</td></tr><tr><td><code>docs/</code></td><td>给人看的完整文档（SOP / 结构说明）</td><td>你 / AI</td></tr><tr><td><code>aios</code></td><td>调度器脚本（终端命令）</td><td>AI</td></tr></tbody></table>
+<blockquote>敏感文件<b>不在</b>这里：飞书密钥等在 <code>（本机私有配置，不公开）</code>，不要搬进来。</blockquote>
+<hr>
+<h3>二、9 个 Agent</h3>
+<table><thead><tr><th>Agent</th><th>角色卡</th><th>一句话</th></tr></thead><tbody><tr><td><b>chief</b></td><td><code>agents/chief.md</code></td><td>总调度：判断类型 → 分派 → 汇总 → 交你确认</td></tr><tr><td><b>pm</b></td><td><code>agents/pm.md</code></td><td>产品经理：发现问题 → 验证 → 方案 → PRD → 数据验证</td></tr><tr><td><b>content</b></td><td><code>agents/content.md</code></td><td>内容运营：找问题 → 检查解释 → 做成内容 → 回收迭代</td></tr><tr><td><b>ops</b></td><td><code>agents/ops.md</code></td><td>Web3 运营：活动 / 社群 / 内容 / 增长 / 复盘（按你的模板）</td></tr><tr><td><b>research</b></td><td><code>agents/research.md</code></td><td>调研：用户 / 市场 / 竞品，结论可溯源</td></tr><tr><td><b>design</b></td><td><code>agents/design.md</code></td><td>设计 / 交互：页面结构 + 黑白线框</td></tr><tr><td><b>tech</b></td><td><code>agents/tech.md</code></td><td>技术可行性：能不能做、多贵、什么坑</td></tr><tr><td><b>growth</b></td><td><code>agents/growth.md</code></td><td>增长运营：漏斗 / 转化 / 指标 / A-B + <b>SEO 巡检 × 技术协作</b>（发现问题→数据证明→提需求→验收→复盘）</td></tr><tr><td><b>review</b></td><td><code>agents/review.md</code></td><td>挑刺：定稿前找漏洞和风险</td></tr></tbody></table>
+<p><b>统一底层原则</b>（所有 Agent 共用）：</p>
+<blockquote>发现问题 → 提出假设 → 验证 → 产出 → 获得反馈 → 迭代 必须区分标注：✅ 已验证事实 · 📊 数据事实 · 💬 用户反馈 · ❓ 未验证假设 · 🤖 推测</blockquote>
+<hr>
+<h3>三、常用命令（终端）</h3>
+<pre><code>aios list        # 列出 9 个 Agent
+aios pm          # 看产品经理角色卡（content / ops / review … 同理）
+aios flow        # 看整体流程
+aios docs        # 列出 docs/ 里的文档
+aios open        # 在访达里打开这个文件夹</code></pre>
+<hr>
+<h3>四、怎么改（三种场景）</h3>
+<p><b>1. 你自己改</b></p>
+<p>直接编辑 <code>agents/</code> 里的 md 文件（普通文本，用「文本编辑」就能开）。</p>
+<p><b>2. 让 AI 改（推荐）</b></p>
+<p>说：「读 <code>AI-Agent/README.md</code>，把 ops 角色卡里的『活动 9 步』改一下，加上 XX」——</p>
+<p>AI 读完就知道去哪改、改成什么样。</p>
+<p><b>3. 加一个新 Agent</b></p>
+<ol><li>在 <code>agents/</code> 新建 <code>xxx.md</code>（照现有卡片的格式写：一句话 / 什么时候用 / 输出 / 边界）</li><li>在 <code>aios</code> 脚本的 <code>ORDER</code> 和 <code>TITLE</code> 里加一行</li><li>在本 README 的表格里加一行</li><li>告诉 AI 一声，它会同步到自己的技能里</li></ol>
+<hr>
+<h3>五、改完之后怎么验证</h3>
+<pre><code>aios list        # 能看到就行
+aios &lt;改的那个&gt;   # 内容对不对</code></pre>
+<p>改动较大时（比如改了铁律），<b>告诉我一声</b> —— 我会把规则同步到我的技能里（我平时自动遵守的那份），不然只改卡片我可能跟不上。</p>
+<hr>
+<h3>六、相关但不在这个文件夹里的东西</h3>
+<table><thead><tr><th>东西</th><th>位置</th><th>说明</th></tr></thead><tbody><tr><td>运营模板与课程截图</td><td><code>~/Desktop/运营笔记/</code>（按运营方向分类，见 <code>00-索引.md</code>）</td><td>运营素材，不是 Agent</td></tr><tr><td>飞书 6 个多维表格</td><td>Lark 里</td><td>运营表体系</td></tr><tr><td>飞书机器人 <code>hermes agent</code></td><td>Lark 后台</td><td>群内 @ 回复</td></tr><tr><td>飞书密钥</td><td><code>（本机私有配置，不公开）</code></td><td>敏感，不放这里</td></tr></tbody></table></div></details><details><summary>个人 AI OS · 结构说明（9 Agent 关系图）　<span class="tag">5 KB</span></summary><div class="inner"><h2>个人 AI OS — 结构说明（77 专用）</h2>
 <blockquote>一句话：Chief Agent 接到任务先判断类型，分派给对应 Agent，最后汇总成一份给你确认。 你只做四件事：① 判断做不做 ② 选方案 ③ 和真实的人沟通 ④ 拍板。</blockquote>
 <hr>
 <h3>一、整体结构（9 个 Agent）</h3>
@@ -105,7 +141,7 @@ aios pm          # 产品经理角色卡
 aios content     # 内容运营角色卡
 aios ops         # Web3 运营角色卡（按你的模板）
 aios flow        # 整体流程</code></pre>
-<p>角色卡目录：<code>~/.config/personal-ai-os/agents/</code>（想改哪个直接改）</p>
+<p>角色卡目录：<code>（本机私有配置，不公开）agents/</code>（想改哪个直接改）</p>
 <hr>
 <h3>七、三条铁律</h3>
 <ol><li><b>不替你拍板</b> —— 判断 / 选择 / 沟通 / 拍板永远在你手上</li><li><b>不瞎编</b> —— 查不到就说查不到，缺信息先列缺口</li><li><b>不说空话</b> —— 大白话 / 结构化 / 可执行 / 有证据</li></ol>
@@ -618,9 +654,80 @@ Research（用户/市场/竞品）· Design（页面/交互）· Tech（可行�
 <ul><li>老板视角：值不值得做？ROI 说得清吗？</li><li>用户视角：流程够简单吗？用户真的会这么干吗？</li><li>研发视角：需求明确吗？异常情况覆盖了吗？</li><li>运营视角：上线后谁来执行？谁来盯数据？</li></ul>
 <p>最后给：<code>老板 ✅ / 用户 ⚠️ / 研发 ❌</code> + <b>必须改的地方</b></p>
 <h3>边界</h3>
-<ul><li>只挑问题，不给新方案（避免越权）</li><li>每条问题要具体到「哪一句 / 哪一步」，不空泛</li></ul></div></details>
+<ul><li>只挑问题，不给新方案（避免越权）</li><li>每条问题要具体到「哪一句 / 哪一步」，不空泛</li></ul></div></details><details><summary>调度器脚本 aios（终端命令：list / flow / docs / open）　<span class="tag">2 KB</span></summary><div class="inner"><p>#!/usr/bin/env python3</p>
+<p>&quot;&quot;&quot;aios — 个人 AI OS 调度器（77 专用）</p>
+<p>用法：</p>
+<p>aios list           列出所有 Agent</p>
+<p>aios &lt;role&gt;         看某个 Agent 的角色卡</p>
+<p>aios flow           看工作流</p>
+<p>aios open           在访达里打开这个文件夹</p>
+<p>aios docs           列出给人看的文档</p>
+<p>&quot;&quot;&quot;</p>
+<p>import os, sys, glob, subprocess</p>
+<p>BASE = os.path.expanduser(&quot;AI-Agent&quot;)</p>
+<p>AGENTS = os.path.join(BASE, &quot;agents&quot;)</p>
+<p>DOCS = os.path.join(BASE, &quot;docs&quot;)</p>
+<p>ORDER = [&quot;chief&quot;, &quot;pm&quot;, &quot;content&quot;, &quot;ops&quot;, &quot;research&quot;, &quot;design&quot;, &quot;tech&quot;, &quot;growth&quot;, &quot;review&quot;]</p>
+<p>TITLE = {</p>
+<p>&quot;chief&quot;: &quot;总调度 —— 判断类型、分派、汇总&quot;,</p>
+<p>&quot;pm&quot;: &quot;产品经理 —— 发现问题→验证→方案→PRD→数据验证&quot;,</p>
+<p>&quot;content&quot;: &quot;内容运营 —— 找问题→检查解释→做成内容→回收迭代&quot;,</p>
+<p>&quot;ops&quot;: &quot;Web3 运营 —— 活动/社群/内容/增长/复盘（按 77 模板）&quot;,</p>
+<p>&quot;research&quot;: &quot;调研 —— 用户/市场/竞品，结论可溯源&quot;,</p>
+<p>&quot;design&quot;: &quot;设计/交互 —— 页面结构 + 黑白线框&quot;,</p>
+<p>&quot;tech&quot;: &quot;技术可行性 —— 能不能做、多贵、什么坑&quot;,</p>
+<p>&quot;growth&quot;: &quot;增长运营 —— 漏斗/转化/指标/A-B + SEO 巡检与技术协作&quot;,</p>
+<p>&quot;review&quot;: &quot;挑刺 —— 定稿前找漏洞和风险&quot;,</p>
+<p>}</p>
+<p>FLOW = &quot;&quot;&quot;</p>
+<p>Chief Agent</p>
+<p>│</p>
+<p>判断任务类型</p>
+<p>│</p>
+<p>┌──────────┬──────┴──────┬──────────┐</p>
+<p>↓          ↓             ↓          ↓</p>
+<p>PM Agent   Content      Ops Agent   Research</p>
+<p>│        Agent          │         Agent</p>
+<p>└──────────┴────────────┴──────────┘</p>
+<p>↓</p>
+<p>Design / Tech / Growth</p>
+<p>↓</p>
+<p>Review Agent（挑刺）</p>
+<p>↓</p>
+<p>最终方案 → 77 确认</p>
+<p>&quot;&quot;&quot;</p>
+<p>def main():</p>
+<p>args = sys.argv[1:]</p>
+<p>if not args or args[0] in (&quot;-h&quot;, &quot;--help&quot;, &quot;help&quot;):</p>
+<p>print(__doc__); return</p>
+<p>cmd = args[0]</p>
+<p>if cmd == &quot;list&quot;:</p>
+<p>print(f&quot;\n个人 AI OS — {len(ORDER)} 个 Agent\n&quot; + &quot;─&quot; * 50)</p>
+<p>for k in ORDER:</p>
+<p>print(f&quot;  {k:9s} {TITLE[k]}&quot;)</p>
+<p>print(&quot;\n  aios &lt;agent&gt; 看角色卡 · aios flow 看流程 · aios open 打开文件夹\n&quot;)</p>
+<p>return</p>
+<p>if cmd == &quot;flow&quot;:</p>
+<p>print(FLOW); return</p>
+<p>if cmd == &quot;open&quot;:</p>
+<p>subprocess.run([&quot;open&quot;, BASE]); print(f&quot;已打开：{BASE}&quot;); return</p>
+<p>if cmd == &quot;docs&quot;:</p>
+<p>print(f&quot;\n文档目录：{DOCS}\n&quot;)</p>
+<p>for f in sorted(os.listdir(DOCS)):</p>
+<p>print(&quot;  &quot;, f)</p>
+<p>print()</p>
+<p>return</p>
+<p>path = os.path.join(AGENTS, f&quot;{cmd}.md&quot;)</p>
+<p>if not os.path.exists(path):</p>
+<p>cand = [p for p in glob.glob(os.path.join(AGENTS, &quot;*.md&quot;)) if cmd in p]</p>
+<p>if not cand:</p>
+<p>print(f&quot;没有这个 Agent：{cmd}\n可用：{&#x27;、&#x27;.join(ORDER)}&quot;); return</p>
+<p>path = cand[0]</p>
+<p>print(open(path, encoding=&quot;utf-8&quot;).read())</p>
+<p>if __name__ == &quot;__main__&quot;:</p>
+<p>main()</p></div></details>
 
-<p class="note">说明：Agent 的角色卡与 SOP 均为本人整理与编写；运行框架为开源的 Hermes Agent，通过 Codex 配置与串联，非从零自研框架。</p>
+<p class="note">说明：9 张角色卡、README、SOP 与调度脚本均为本人整理与编写；运行框架为开源的 Hermes Agent，通过 Codex 配置与串联，非从零自研框架。含隐私的配置路径已隐去。</p>
 </article>
-<footer>个人 AI 工作流 · 可下载原始 Markdown（每张卡片右侧的「角色卡」链接）</footer>
+<footer>个人 AI 工作流 · 左侧「角色卡」链接可直接下载对应 Markdown</footer>
 </div></body></html>

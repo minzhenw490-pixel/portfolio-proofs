@@ -106,7 +106,7 @@ aios ops         # Web3 运营角色卡（按你的模板）
 aios flow        # 整体流程
 ```
 
-角色卡目录：`~/.config/personal-ai-os/agents/`（想改哪个直接改）
+角色卡目录：`（本机私有配置，不公开）agents/`（想改哪个直接改）
 
 ---
 
